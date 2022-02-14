@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var destaquesCollectionView: UICollectionView!
 
-    var posterArray = [UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "2"),]
+    var posterArray = [UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "3"),]
     override func viewDidLoad() {
         super.viewDidLoad()
         destaquesCollectionView.dataSource = self
@@ -24,7 +24,10 @@ extension ViewController: UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: UICollectionViewCell = destaquesCollectionView.dequeueReusableCell(withReuseIdentifier: "destaqueCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
+        
+        cell.posterImage.image = posterArray[indexPath.row]
+        
         
         return cell
     }

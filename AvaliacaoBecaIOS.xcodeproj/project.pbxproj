@@ -13,6 +13,7 @@
 		3038C6A327B9975700663D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3038C6A127B9975700663D87 /* Main.storyboard */; };
 		3038C6A527B9975900663D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3038C6A427B9975900663D87 /* Assets.xcassets */; };
 		3038C6A827B9975900663D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3038C6A627B9975900663D87 /* LaunchScreen.storyboard */; };
+		3038C6B827BAFC4900663D87 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3038C6A427B9975900663D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3038C6A727B9975900663D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3038C6A927B9975900663D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3038C69B27B9975700663D87 /* AppDelegate.swift */,
 				3038C69D27B9975700663D87 /* SceneDelegate.swift */,
 				3038C69F27B9975700663D87 /* ViewController.swift */,
+				3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */,
 				3038C6A127B9975700663D87 /* Main.storyboard */,
 				3038C6A427B9975900663D87 /* Assets.xcassets */,
 				3038C6A627B9975900663D87 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				3038C6A027B9975700663D87 /* ViewController.swift in Sources */,
 				3038C69C27B9975700663D87 /* AppDelegate.swift in Sources */,
+				3038C6B827BAFC4900663D87 /* ImageCollectionViewCell.swift in Sources */,
 				3038C69E27B9975700663D87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,28 +26,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-iU-P6e" userLabel="Destaques Collection View">
-                                <rect key="frame" x="0.0" y="137" width="414" height="613"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-iU-P6e" userLabel="Destaques Collection View">
+                                <rect key="frame" x="0.0" y="157" width="414" height="389"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="613" id="IOi-zq-rRe"/>
+                                    <constraint firstAttribute="height" constant="389" id="IOi-zq-rRe"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R01-kc-9np">
-                                    <size key="itemSize" width="339" height="611"/>
+                                    <size key="itemSize" width="306" height="381"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="destaqueCell" id="6Xa-44-3m2">
-                                        <rect key="frame" x="0.0" y="1" width="339" height="611"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="ImageCollectionViewCell" id="6Xa-44-3m2" customClass="ImageCollectionViewCell" customModule="AvaliacaoBecaIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="4" width="306" height="381"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgi-zI-biD">
-                                            <rect key="frame" x="0.0" y="0.0" width="339" height="611"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="306" height="381"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="sRF-Tv-mrb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="611"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="sRF-Tv-mrb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="306" height="381"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -57,9 +57,16 @@
                                                 <constraint firstItem="sRF-Tv-mrb" firstAttribute="top" secondItem="dgi-zI-biD" secondAttribute="top" id="rtm-ZC-tJ9"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="339" height="611"/>
+                                        <size key="customSize" width="306" height="381"/>
+                                        <connections>
+                                            <outlet property="posterImage" destination="sRF-Tv-mrb" id="gig-Fv-gGs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="N0S-Jt-m8C"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CW6-Yn-i92"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -70,7 +77,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffc-JZ-FtU" secondAttribute="trailing" symbolic="YES" id="YGk-gj-zUt"/>
                             <constraint firstItem="Bnk-iU-P6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aDa-vZ-gbW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bnk-iU-P6e" secondAttribute="trailing" id="lff-Gz-5YY"/>
-                            <constraint firstItem="Bnk-iU-P6e" firstAttribute="top" secondItem="ffc-JZ-FtU" secondAttribute="bottom" id="wXS-ET-n1N"/>
+                            <constraint firstItem="Bnk-iU-P6e" firstAttribute="top" secondItem="ffc-JZ-FtU" secondAttribute="bottom" constant="20" id="wXS-ET-n1N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wgA-mO-hLN"/>
@@ -103,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="232.5" height="384"/>
+        <image name="3" width="265" height="384"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
