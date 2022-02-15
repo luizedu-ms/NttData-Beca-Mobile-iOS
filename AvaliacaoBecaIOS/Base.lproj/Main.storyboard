@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques da Semana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-JZ-FtU">
-                                <rect key="frame" x="0.0" y="98" width="326" height="39"/>
+                                <rect key="frame" x="0.0" y="74" width="326" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="SLd-dc-jsx"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-iU-P6e" userLabel="Destaques Collection View">
-                                <rect key="frame" x="0.0" y="157" width="414" height="389"/>
+                                <rect key="frame" x="0.0" y="133" width="414" height="389"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="IOi-zq-rRe"/>
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="OTG-ih-ENG"/>
+                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OTG-ih-ENG"/>
                             <constraint firstItem="ffc-JZ-FtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P5o-q6-hoC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffc-JZ-FtU" secondAttribute="trailing" symbolic="YES" id="YGk-gj-zUt"/>
                             <constraint firstItem="Bnk-iU-P6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aDa-vZ-gbW"/>
@@ -93,10 +93,10 @@
         <!--Navigation Controller-->
         <scene sceneID="Z0g-U6-zWQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fDQ-c3-PpB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fDQ-c3-PpB" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ImZ-79-HBR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

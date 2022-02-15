@@ -31,6 +31,12 @@ extension ViewController: UICollectionViewDataSource{
         
         return cell
     }
-    
-    
+}
+
+extension ViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let destaquesPageController = DestaquePageViewController(nibName: "DestaquePageViewController", bundle: nil)
+        
+        navigationController?.pushViewController(destaquesPageController, animated: true)
+    }
 }
