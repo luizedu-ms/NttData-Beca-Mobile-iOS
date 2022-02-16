@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DestaquePageViewController" customModule="AvaliacaoBecaIOS" customModuleProvider="target">
             <connections>
+                <outlet property="PopularidadeLabel" destination="ROY-I5-7Dg" id="Zwv-3b-88k"/>
+                <outlet property="PosterDestaqueImageView" destination="7fy-1v-kJ1" id="emV-0G-le8"/>
+                <outlet property="SinopseLabel" destination="MBg-M9-sVC" id="C8j-AD-87T"/>
+                <outlet property="TituloLabel" destination="7b9-Zg-1gz" id="I4z-Nw-bgx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +20,136 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="k0Y-JO-d3n">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQi-Y0-y0h" userLabel="Poster Destaque View">
+                            <rect key="frame" x="0.0" y="0.0" width="426.5" height="574"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="7fy-1v-kJ1">
+                                    <rect key="frame" x="0.0" y="0.0" width="426.5" height="574"/>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PO-Ir-z9q">
+                                    <rect key="frame" x="8" y="52" width="40" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="icon_back"/>
+                                    <connections>
+                                        <action selector="botaoVoltar:" destination="-1" eventType="touchUpInside" id="r3r-tU-usy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="7fy-1v-kJ1" secondAttribute="bottom" id="G7b-QC-kVp"/>
+                                <constraint firstItem="7fy-1v-kJ1" firstAttribute="leading" secondItem="VQi-Y0-y0h" secondAttribute="leading" id="KQM-I2-PgG"/>
+                                <constraint firstAttribute="trailing" secondItem="7fy-1v-kJ1" secondAttribute="trailing" id="PUo-2J-ttO"/>
+                                <constraint firstItem="7fy-1v-kJ1" firstAttribute="top" secondItem="VQi-Y0-y0h" secondAttribute="top" id="s5D-vg-DhP"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cge-PM-J3x">
+                            <rect key="frame" x="8" y="574" width="410.5" height="230"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAp-Hc-pxT" userLabel="spacing">
+                                    <rect key="frame" x="0.0" y="0.0" width="409.5" height="10"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="Tda-X2-L0Z"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Do FIlme" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b9-Zg-1gz">
+                                    <rect key="frame" x="0.0" y="11" width="204.5" height="45"/>
+                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="45"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="279" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-Bh-7sb">
+                                    <rect key="frame" x="0.0" y="57" width="400" height="50"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pjv-pV-16w">
+                                            <rect key="frame" x="0.0" y="0.0" width="60.5" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-d1-DNV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="UAQ-jA-fXb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-Vy-zbC">
+                                            <rect key="frame" x="339.5" y="0.0" width="60.5" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="popularidade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="61" id="Grg-ks-Phh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="12.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="9"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="190.084" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-I5-7Dg">
+                                                    <rect key="frame" x="0.0" y="12.5" width="60.5" height="37.5"/>
+                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-M9-sVC">
+                                    <rect key="frame" x="0.0" y="108" width="402.5" height="122"/>
+                                    <string key="text">Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination.</string>
+                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="MBg-M9-sVC" secondAttribute="trailing" constant="8" id="nUP-Up-ACG"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="VQi-Y0-y0h" firstAttribute="leading" secondItem="k0Y-JO-d3n" secondAttribute="leading" id="0Ne-9O-jaU"/>
+                        <constraint firstAttribute="trailing" secondItem="cge-PM-J3x" secondAttribute="trailing" constant="8" id="699-Gr-Bcw"/>
+                        <constraint firstItem="VQi-Y0-y0h" firstAttribute="top" secondItem="k0Y-JO-d3n" secondAttribute="top" id="N0p-UA-rRv"/>
+                        <constraint firstItem="cge-PM-J3x" firstAttribute="leading" secondItem="k0Y-JO-d3n" secondAttribute="leading" constant="8" id="aAp-3B-oiY"/>
+                        <constraint firstItem="cge-PM-J3x" firstAttribute="top" secondItem="VQi-Y0-y0h" secondAttribute="bottom" id="cZ2-zs-Fo5"/>
+                        <constraint firstAttribute="trailing" secondItem="VQi-Y0-y0h" secondAttribute="trailing" id="hU0-bz-sh4"/>
+                        <constraint firstAttribute="bottom" secondItem="cge-PM-J3x" secondAttribute="bottom" id="sa6-Ne-aa3"/>
+                        <constraint firstItem="VQi-Y0-y0h" firstAttribute="height" secondItem="k0Y-JO-d3n" secondAttribute="height" multiplier="0.6406" id="xwK-xn-MhE"/>
+                        <constraint firstItem="VQi-Y0-y0h" firstAttribute="width" secondItem="k0Y-JO-d3n" secondAttribute="width" multiplier="1.03" id="zV0-IR-IAa"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="86"/>
+            <constraints>
+                <constraint firstItem="k0Y-JO-d3n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dKW-9t-KmC"/>
+                <constraint firstAttribute="trailing" secondItem="k0Y-JO-d3n" secondAttribute="trailing" id="t4f-Cf-Mh1"/>
+                <constraint firstAttribute="bottom" secondItem="k0Y-JO-d3n" secondAttribute="bottom" id="wsy-YT-LMM"/>
+                <constraint firstItem="k0Y-JO-d3n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x62-a8-4d4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
         </view>
     </objects>
     <resources>
+        <image name="3" width="265" height="384"/>
+        <image name="icon_back" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
