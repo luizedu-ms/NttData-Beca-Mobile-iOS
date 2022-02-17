@@ -7,5 +7,6 @@ target 'AvaliacaoBecaIOS' do
 
   # Pods for AvaliacaoBecaIOS
    pod ‘Alamofire’, ‘~> 5.5’
+   pod 'AlamofireImage', '~> 4.1'
 
 end

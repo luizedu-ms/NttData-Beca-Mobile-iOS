@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import AlamofireImage
 class ViewController: UIViewController {
 
     @IBOutlet weak var destaquesCollectionView: UICollectionView!
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         destaquesCollectionView.dataSource = self
+        destaquesCollectionView.delegate = self
     }
 }
 
