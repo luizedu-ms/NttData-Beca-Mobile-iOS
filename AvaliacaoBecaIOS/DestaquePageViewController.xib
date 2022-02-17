@@ -27,7 +27,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQi-Y0-y0h" userLabel="Poster Destaque View">
                             <rect key="frame" x="0.0" y="0.0" width="426.5" height="574"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="7fy-1v-kJ1">
+                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7fy-1v-kJ1">
                                     <rect key="frame" x="0.0" y="0.0" width="426.5" height="574"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 </imageView>
@@ -49,8 +49,8 @@
                                 <constraint firstItem="7fy-1v-kJ1" firstAttribute="top" secondItem="VQi-Y0-y0h" secondAttribute="top" id="s5D-vg-DhP"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cge-PM-J3x">
-                            <rect key="frame" x="8" y="574" width="410.5" height="230"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cge-PM-J3x">
+                            <rect key="frame" x="8" y="574" width="410.5" height="252"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAp-Hc-pxT" userLabel="spacing">
                                     <rect key="frame" x="0.0" y="0.0" width="409.5" height="10"/>
@@ -60,50 +60,51 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Do FIlme" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b9-Zg-1gz">
-                                    <rect key="frame" x="0.0" y="11" width="204.5" height="45"/>
-                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="45"/>
+                                    <rect key="frame" x="0.0" y="16" width="191" height="42"/>
+                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="42"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="271" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-Bh-7sb">
-                                    <rect key="frame" x="0.0" y="57" width="403" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="286" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-Bh-7sb">
+                                    <rect key="frame" x="0.0" y="64" width="395" height="60"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pjv-pV-16w">
-                                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="54.5" height="60"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-d1-DNV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="UAQ-jA-fXb"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-d1-DNV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="54.5" height="60"/>
                                                     <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-Vy-zbC">
-                                            <rect key="frame" x="337" y="0.0" width="66" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-Vy-zbC">
+                                            <rect key="frame" x="340.5" y="0.0" width="54.5" height="60"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="popularidade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="61" id="Grg-ks-Phh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="16.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="votos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="61" id="Grg-ks-Phh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="54.5" height="16.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-I5-7Dg">
-                                                    <rect key="frame" x="0.0" y="16.5" width="66" height="33.5"/>
-                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                    <rect key="frame" x="0.0" y="22.5" width="54.5" height="37.5"/>
+                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="37"/>
                                                     <color key="textColor" systemColor="systemGreenColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="Yqz-No-fTO"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-M9-sVC">
-                                    <rect key="frame" x="0.0" y="108" width="402.5" height="122"/>
+                                    <rect key="frame" x="0.0" y="130" width="402.5" height="122"/>
                                     <string key="text">Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination.</string>
                                     <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
                                     <nil key="textColor"/>
@@ -140,7 +141,6 @@
         </view>
     </objects>
     <resources>
-        <image name="3" width="265" height="384"/>
         <image name="icon_back" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

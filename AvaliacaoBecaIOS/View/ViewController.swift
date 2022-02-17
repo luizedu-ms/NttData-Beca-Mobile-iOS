@@ -11,39 +11,38 @@ import AlamofireImage
 class ViewController: UIViewController {
 
     @IBOutlet weak var destaquesCollectionView: UICollectionView!
+    
+    var controller: MoviesController = MoviesController()
 
-    var posterArray : [Result] = []
-    private var keyApi = "680d12ebba0195c58970bf381ab494db"
+    //var moviesArray : [Result] = []
+ 
     private var url = "https://image.tmdb.org/t/p/w500/"
     
     override func viewDidLoad() {
-        AF.request("https://api.themoviedb.org/3/trending/movie/week?api_key=\(keyApi)&language=pt-BR").responseJSON { response in
-                    if response.response?.statusCode == 200{
-                        if let jsonData = response.data{
-                            do{
-                                let moviesAPI:MoviesAPI = try JSONDecoder().decode(MoviesAPI.self, from:jsonData)
-                                print(moviesAPI.results.count)
-                                self.posterArray = moviesAPI.results
-                                self.destaquesCollectionView.reloadData()
-                            }catch{
-                                print(error)
-                    }
-                }
+        super.viewDidLoad()
+        self.destaquesCollectionView.delegate = self
+        self.destaquesCollectionView.dataSource = self
+        
+        self.controller.getRequestMoviews { response, error in
+            if response == true{
+                self.destaquesCollectionView.reloadData()
+            }else{
+                print(error)
             }
         }
     }
 }
 extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posterArray.count
+        return self.controller.count()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
         
         //let size = CGSize(width: 500.0, height: 400.0)
-        
-        if let posterURL = URL(string: url + posterArray[indexPath.row].posterPath) {
+        //moviesArray[indexPath.row].posterPath
+        if let posterURL = URL(string: url + self.controller.loadCurrentePoster(indexPath: indexPath)) {
                 cell.posterImage.layer.cornerRadius = 15
                 cell.posterImage.layer.masksToBounds = true
               //  cell.posterImage.sizeThatFits(size)
@@ -51,8 +50,7 @@ extension ViewController: UICollectionViewDataSource{
             }else{
                 print("erro")
             }
-
-       
+        
         return cell
     }
 }
