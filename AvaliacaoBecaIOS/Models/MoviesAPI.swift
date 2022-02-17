@@ -28,43 +28,46 @@ struct MoviesAPI: Codable {
 // MARK: - Result
 struct Result: Codable {
     let id: Int
-    let originalTitle, posterPath: String
-    let video: Bool
-    let voteAverage: Double
-    let overview, releaseDate: String
-    let voteCount: Int
+    let originalTitle: String
+    let posterPath: String
+    //let video: Bool
+    //let voteAverage: Double
+    let overview: String
+    // let releaseDate: String
+    //let voteCount: Int
     let title: String
-    let adult: Bool
-    let backdropPath: String
-    let originalLanguage: OriginalLanguage
-    let genreIDS: [Int]
+    //let adult: Bool
+    //let backdropPath: String
+    //let originalLanguage: OriginalLanguage
+    //let genreIDS: [Int]
     let popularity: Double
-    let mediaType: MediaType
+    //let mediaType: MediaType
 
     enum CodingKeys: String, CodingKey {
         case id
         case originalTitle = "original_title"
         case posterPath = "poster_path"
-        case video
-        case voteAverage = "vote_average"
-        case overview
-        case releaseDate = "release_date"
-        case voteCount = "vote_count"
-        case title, adult
-        case backdropPath = "backdrop_path"
-        case originalLanguage = "original_language"
-        case genreIDS = "genre_ids"
+        //case video
+        //case voteAverage = "vote_average"
+        case overview = "overview"
+        //case releaseDate = "release_date"
+       // case voteCount = "vote_count"
+        case title = "title"
+        //case adult
+        //case backdropPath = "backdrop_path"
+        //case originalLanguage = "original_language"
+        //case genreIDS = "genre_ids"
         case popularity
-        case mediaType = "media_type"
+        //case mediaType = "media_type"
     }
 }
 
-enum MediaType: String, Codable {
-    case movie = "movie"
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case es = "es"
-    case fr = "fr"
-}
+//enum MediaType: String, Codable {
+//    case movie = "movie"
+//}
+//
+//enum OriginalLanguage: String, Codable {
+//    case en = "en"
+//    case es = "es"
+//    case fr = "fr"
+//}
