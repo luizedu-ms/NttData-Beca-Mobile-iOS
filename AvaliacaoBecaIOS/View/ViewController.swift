@@ -41,9 +41,12 @@ extension ViewController: UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
         
+        //let size = CGSize(width: 500.0, height: 400.0)
+        
         if let posterURL = URL(string: url + posterArray[indexPath.row].posterPath) {
                 cell.posterImage.layer.cornerRadius = 15
                 cell.posterImage.layer.masksToBounds = true
+              //  cell.posterImage.sizeThatFits(size)
                 cell.posterImage.af.setImage(withURL: posterURL, imageTransition: .crossDissolve(0.2))
             }else{
                 print("erro")
