@@ -16,9 +16,12 @@
 		3038C6B827BAFC4900663D87 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */; };
 		3038C6BB27BAFFC000663D87 /* DestaquePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3038C6B927BAFFC000663D87 /* DestaquePageViewController.swift */; };
 		3038C6BC27BAFFC000663D87 /* DestaquePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3038C6BA27BAFFC000663D87 /* DestaquePageViewController.xib */; };
+		3038C6C327BD9F1B00663D87 /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3038C6C227BD9F1B00663D87 /* MoviesAPI.swift */; };
+		D3815C6E343B839BA3F01557 /* Pods_AvaliacaoBecaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12B1EC0698120292D8B9456 /* Pods_AvaliacaoBecaIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FBABE34BB74127FAB48E4A2 /* Pods-AvaliacaoBecaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvaliacaoBecaIOS.release.xcconfig"; path = "Target Support Files/Pods-AvaliacaoBecaIOS/Pods-AvaliacaoBecaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		3038C69827B9975700663D87 /* AvaliacaoBecaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvaliacaoBecaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038C69B27B9975700663D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3038C69D27B9975700663D87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3038C6B927BAFFC000663D87 /* DestaquePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestaquePageViewController.swift; sourceTree = "<group>"; };
 		3038C6BA27BAFFC000663D87 /* DestaquePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestaquePageViewController.xib; sourceTree = "<group>"; };
+		3038C6C227BD9F1B00663D87 /* MoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
+		375E6A88364EDEF3DE327475 /* Pods-AvaliacaoBecaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AvaliacaoBecaIOS.debug.xcconfig"; path = "Target Support Files/Pods-AvaliacaoBecaIOS/Pods-AvaliacaoBecaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D12B1EC0698120292D8B9456 /* Pods_AvaliacaoBecaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvaliacaoBecaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3815C6E343B839BA3F01557 /* Pods_AvaliacaoBecaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041B3CDF56DB82379EA86D69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				375E6A88364EDEF3DE327475 /* Pods-AvaliacaoBecaIOS.debug.xcconfig */,
+				0FBABE34BB74127FAB48E4A2 /* Pods-AvaliacaoBecaIOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		066AFF1B2D79A840F408B66C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D12B1EC0698120292D8B9456 /* Pods_AvaliacaoBecaIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3038C68F27B9975700663D87 = {
 			isa = PBXGroup;
 			children = (
 				3038C69A27B9975700663D87 /* AvaliacaoBecaIOS */,
 				3038C69927B9975700663D87 /* Products */,
+				041B3CDF56DB82379EA86D69 /* Pods */,
+				066AFF1B2D79A840F408B66C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +89,43 @@
 		3038C69A27B9975700663D87 /* AvaliacaoBecaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				3038C6BF27BD835D00663D87 /* Models */,
+				3038C6C027BD837B00663D87 /* View */,
+				3038C6C127BD948000663D87 /* Controller */,
 				3038C69B27B9975700663D87 /* AppDelegate.swift */,
 				3038C69D27B9975700663D87 /* SceneDelegate.swift */,
-				3038C69F27B9975700663D87 /* ViewController.swift */,
-				3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */,
 				3038C6A127B9975700663D87 /* Main.storyboard */,
 				3038C6BA27BAFFC000663D87 /* DestaquePageViewController.xib */,
-				3038C6B927BAFFC000663D87 /* DestaquePageViewController.swift */,
 				3038C6A427B9975900663D87 /* Assets.xcassets */,
 				3038C6A627B9975900663D87 /* LaunchScreen.storyboard */,
 				3038C6A927B9975900663D87 /* Info.plist */,
 			);
 			path = AvaliacaoBecaIOS;
+			sourceTree = "<group>";
+		};
+		3038C6BF27BD835D00663D87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3038C6C227BD9F1B00663D87 /* MoviesAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3038C6C027BD837B00663D87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3038C69F27B9975700663D87 /* ViewController.swift */,
+				3038C6B927BAFFC000663D87 /* DestaquePageViewController.swift */,
+				3038C6B727BAFC4900663D87 /* ImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3038C6C127BD948000663D87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3038C6AC27B9975900663D87 /* Build configuration list for PBXNativeTarget "AvaliacaoBecaIOS" */;
 			buildPhases = (
+				7C322ED1E20A54C11A03BB2A /* [CP] Check Pods Manifest.lock */,
 				3038C69427B9975700663D87 /* Sources */,
 				3038C69527B9975700663D87 /* Frameworks */,
 				3038C69627B9975700663D87 /* Resources */,
+				99F7240BF6473BA252CA5A87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +197,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C322ED1E20A54C11A03BB2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AvaliacaoBecaIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99F7240BF6473BA252CA5A87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AvaliacaoBecaIOS/Pods-AvaliacaoBecaIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AvaliacaoBecaIOS/Pods-AvaliacaoBecaIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AvaliacaoBecaIOS/Pods-AvaliacaoBecaIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3038C69427B9975700663D87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +249,7 @@
 				3038C69C27B9975700663D87 /* AppDelegate.swift in Sources */,
 				3038C6B827BAFC4900663D87 /* ImageCollectionViewCell.swift in Sources */,
 				3038C69E27B9975700663D87 /* SceneDelegate.swift in Sources */,
+				3038C6C327BD9F1B00663D87 /* MoviesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +393,7 @@
 		};
 		3038C6AD27B9975900663D87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 375E6A88364EDEF3DE327475 /* Pods-AvaliacaoBecaIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +421,7 @@
 		};
 		3038C6AE27B9975900663D87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FBABE34BB74127FAB48E4A2 /* Pods-AvaliacaoBecaIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

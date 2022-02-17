@@ -25,10 +25,7 @@ extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
-        
         cell.posterImage.image = posterArray[indexPath.row]
-        
-        
         return cell
     }
 }

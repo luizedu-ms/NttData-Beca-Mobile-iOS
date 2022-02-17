@@ -17,17 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques da Semana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-JZ-FtU">
-                                <rect key="frame" x="0.0" y="74" width="326" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes Recomendados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-1g-EnX">
+                                <rect key="frame" x="20" y="86" width="315" height="45"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques da semana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-JZ-FtU">
+                                <rect key="frame" x="20" y="144" width="190.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="SLd-dc-jsx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-iU-P6e" userLabel="Destaques Collection View">
-                                <rect key="frame" x="0.0" y="133" width="414" height="389"/>
+                                <rect key="frame" x="0.0" y="198" width="434" height="389"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="IOi-zq-rRe"/>
@@ -72,12 +78,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OTG-ih-ENG"/>
-                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P5o-q6-hoC"/>
+                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="F9y-7r-UVj"/>
+                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="P5o-q6-hoC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oVw-1g-EnX" secondAttribute="trailing" symbolic="YES" id="R63-qZ-Lzg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffc-JZ-FtU" secondAttribute="trailing" symbolic="YES" id="YGk-gj-zUt"/>
                             <constraint firstItem="Bnk-iU-P6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aDa-vZ-gbW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bnk-iU-P6e" secondAttribute="trailing" id="lff-Gz-5YY"/>
-                            <constraint firstItem="Bnk-iU-P6e" firstAttribute="top" secondItem="ffc-JZ-FtU" secondAttribute="bottom" constant="20" id="wXS-ET-n1N"/>
+                            <constraint firstItem="oVw-1g-EnX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="kTY-sF-9PC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bnk-iU-P6e" secondAttribute="trailing" constant="-20" id="lff-Gz-5YY"/>
+                            <constraint firstItem="oVw-1g-EnX" firstAttribute="leading" secondItem="ffc-JZ-FtU" secondAttribute="leading" id="mZJ-Xo-9dD"/>
+                            <constraint firstItem="ffc-JZ-FtU" firstAttribute="top" secondItem="oVw-1g-EnX" secondAttribute="bottom" constant="13" id="qt0-f6-YJ0"/>
+                            <constraint firstItem="Bnk-iU-P6e" firstAttribute="top" secondItem="ffc-JZ-FtU" secondAttribute="bottom" constant="15" id="wXS-ET-n1N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="wgA-mO-hLN"/>

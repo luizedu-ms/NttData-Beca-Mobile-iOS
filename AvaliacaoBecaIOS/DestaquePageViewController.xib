@@ -65,14 +65,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="279" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-Bh-7sb">
-                                    <rect key="frame" x="0.0" y="57" width="400" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="271" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-Bh-7sb">
+                                    <rect key="frame" x="0.0" y="57" width="403" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pjv-pV-16w">
-                                            <rect key="frame" x="0.0" y="0.0" width="60.5" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-d1-DNV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="UAQ-jA-fXb"/>
                                                     </constraints>
@@ -83,18 +83,18 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-Vy-zbC">
-                                            <rect key="frame" x="339.5" y="0.0" width="60.5" height="50"/>
+                                            <rect key="frame" x="337" y="0.0" width="66" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="popularidade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="61" id="Grg-ks-Phh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="12.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="16.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="9"/>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="190.084" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-I5-7Dg">
-                                                    <rect key="frame" x="0.0" y="12.5" width="60.5" height="37.5"/>
-                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-I5-7Dg">
+                                                    <rect key="frame" x="0.0" y="16.5" width="66" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                                     <color key="textColor" systemColor="systemGreenColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
