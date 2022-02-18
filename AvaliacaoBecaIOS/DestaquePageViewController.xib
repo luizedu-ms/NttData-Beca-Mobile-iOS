@@ -104,7 +104,7 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-M9-sVC">
-                                    <rect key="frame" x="0.0" y="130" width="402.5" height="122"/>
+                                    <rect key="frame" x="0.0" y="130" width="390.5" height="122"/>
                                     <string key="text">Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination.</string>
                                     <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="15"/>
                                     <nil key="textColor"/>
@@ -112,7 +112,7 @@
                                 </label>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="MBg-M9-sVC" secondAttribute="trailing" constant="8" id="nUP-Up-ACG"/>
+                                <constraint firstAttribute="trailing" secondItem="MBg-M9-sVC" secondAttribute="trailing" constant="20" id="nUP-Up-ACG"/>
                             </constraints>
                         </stackView>
                     </subviews>
