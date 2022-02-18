@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 import AlamofireImage
 class ViewController: UIViewController {
 
@@ -16,7 +15,7 @@ class ViewController: UIViewController {
 
     //var moviesArray : [Result] = []
  
-    private var url = "https://image.tmdb.org/t/p/w500/"
+    var url = "https://image.tmdb.org/t/p/w500/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +26,16 @@ class ViewController: UIViewController {
             if response == true{
                 self.destaquesCollectionView.reloadData()
             }else{
-                print(error)
+                print(error!)
             }
+        }
+    }
+    
+    func irParaDetalhes(_ detalhes: Result?){
+        
+        if let posterSelecionado = detalhes{
+            let destaquesPageController = DestaquePageViewController.instanciar(posterSelecionado)
+            navigationController?.pushViewController(destaquesPageController, animated: true)
         }
     }
 }
@@ -57,7 +64,8 @@ extension ViewController: UICollectionViewDataSource{
 
 extension ViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let destaquesPageController = DestaquePageViewController(nibName: "DestaquePageViewController", bundle: nil)
-        navigationController?.pushViewController(destaquesPageController, animated: true)
+        
+        let posterSelecionado = controller.moviesArray[indexPath.row]
+        irParaDetalhes(posterSelecionado)
     }
 }

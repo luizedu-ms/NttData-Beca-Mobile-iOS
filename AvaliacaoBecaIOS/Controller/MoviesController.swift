@@ -11,13 +11,22 @@ import Alamofire
 
 class MoviesController{
     
-    private var moviesArray: [Result] = []
+    var moviesArray: [Result] = []
     private var keyApi = "680d12ebba0195c58970bf381ab494db"
     func count() -> Int{
         return self.moviesArray.count
     }
     func loadCurrentePoster(indexPath: IndexPath) -> String{
         return self.moviesArray[indexPath.row].posterPath
+    }
+    func loadCurrenteTitle(indexPath: IndexPath) -> String{
+        return self.moviesArray[indexPath.row].title
+    }
+    func loadCurrenteOverview(indexPath: IndexPath) -> String{
+        return self.moviesArray[indexPath.row].overview
+    }
+    func loadCurrenteVote(indexPath: IndexPath) -> Double{
+        return self.moviesArray[indexPath.row].voteAverage
     }
     
     func getRequestMoviews(completionHandler: @escaping (Bool, Error?) -> Void){
