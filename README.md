@@ -1,4 +1,4 @@
-# Pirmeira Avaliação Beca Mobile iOS
+# Pirmeira Avaliação Beca Mobile iOS.
 
 Criar um aplicativo que realize a listagem de filmes e exibição dos detalhes:
  * Tela principal, lista de filmes:
